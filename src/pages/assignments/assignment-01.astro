@@ -37,6 +37,7 @@ export const pageTitle = "Assignment 01";
         alt="View of the Catskill Mountains near Tannersville"
         class="hero-image"
       />
+    </section>
       <section class="section-activity" id="hike">
         <div class="section-text-panel">
           <h2>Hike</h2>
@@ -165,5 +166,94 @@ export const pageTitle = "Assignment 01";
   /* importing fonts */
   @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 240px;
+  width: 100%;
+  background-color: #F2F2F0;
+}
+
+.nav-branding{
+  margin: 0;
+}
+
+.nav-btn{
+  color: #FFD1A8;
+  background-color: #174A28;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.section-hero{
+  width: 100%;
+  height: 600px;
+  position: relative;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
   
+  .hero-image{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-text-block{
+    position: relative;
+    z-index:100;
+    background-color: white;
+    width: 400px;
+    padding: 32px; 
+    margin-top: 0;
+    opacity: 80%;
+  }
+
+  #hike{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .section-text-panel{
+    background-color: #F2F2F0;
+    width: 400px;
+    height: 500px;
+    padding: 32px;
+    margin: 0;
+    gap: 20px;
+  }
+
+  h2, p, .btn-cta{
+    padding: 8px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  #hike .btn-cta{
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 2px #3A6EA5 ;
+    border-radius: 8px;
+    width: 166px;
+    padding: 8px 16px;
+    margin: 10px;
+  }
+
+  .section-image{
+    height: 500px;
+    width: 800px;
+  }
+
+  #paddle{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
 </style>
