@@ -159,12 +159,18 @@ export const pageTitle = "Assignment 01-responsive";
         >
       </nav>
     </section>
-  </div>
+  </div>https://miles-dw2.netlify.app/_astro/hero-image.DGRISH3E_1tHXNg.webp
 </Layout>
 
 <style>
   /* importing fonts */
   @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+
+  
+  .page-container{
+    display: flex; flex-direction: column; align-items: center;
+  }
 
   nav{
   display: flex;
@@ -174,33 +180,33 @@ export const pageTitle = "Assignment 01-responsive";
   padding: 8px 240px;
   width: 100%;
   background-color: #F2F2F0;
-}
+  }
 
-.nav-branding{
+  .nav-branding{
   margin: 0;
-}
+  }
 
-.nav-btn{
+  .nav-btn{
   color: #FFD1A8;
   background-color: #174A28;
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
-}
+  }
 
-.section-hero{
+  .section-hero{
   width: 100%;
   height: 600px;
   position: relative;
   display: flex;
   justify-content:center;
   align-items: center;
-}
+  }
   
   .hero-image{
     position: absolute;
     left: 0;
-    width: 100%;
+    /* width: 50%; */
     height: 100%;
     object-fit: cover;
   }
@@ -209,7 +215,7 @@ export const pageTitle = "Assignment 01-responsive";
     position: relative;
     z-index:100;
     background-color: white;
-    width: 400px;
+    /* width: 100px; */
     padding: 32px; 
     margin-top: 0;
     opacity: 80%;
@@ -219,11 +225,12 @@ export const pageTitle = "Assignment 01-responsive";
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
   }
 
   .section-text-panel{
     background-color: #F2F2F0;
-    width: 400px;
+    width: 50%;
     height: 500px;
     padding: 32px;
     margin: 0;
@@ -250,7 +257,7 @@ export const pageTitle = "Assignment 01-responsive";
 
   .section-image{
     height: 500px;
-    width: 800px;
+    width: 50%;
   }
 
   #paddle{
@@ -304,8 +311,8 @@ export const pageTitle = "Assignment 01-responsive";
 
   .places-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     gap: 10px;
     justify-content: center;
     align-items: stretch;
@@ -339,4 +346,13 @@ export const pageTitle = "Assignment 01-responsive";
   .places-tile p{
   margin-top: 0%;
   }
+
+
+
+@media (min-width: 600px) { 
+
+
+}
+
+ 
 </style>
