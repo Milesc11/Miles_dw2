@@ -1,0 +1,17 @@
+---
+const {title} = Astro.props
+---
+
+<button class="Dropdown">{title}</button>
+<div class="panel">
+    <p>If this text pops out, good jop</p>
+</div>
+
+<style>
+    .Dropdown{
+        background-color: lightgray;
+    }
+    .Dropdown:hover{
+        background-color: gray;
+    }
+</style>
