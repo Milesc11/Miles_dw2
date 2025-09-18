@@ -3,8 +3,38 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Home">
-  <h1>Welcome! (Whether it's me doing more coding or someone checking out my site)</h1>
-  <p>This is my [purple]Design for the Web 2 starter site and i'm having all the fun.</p>
-  <img src="https://i.ytimg.com/vi/q1YdkHQ3sdM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBYmtjjMOdfm3DPol7-2oVB6yVVug" alt="abk">
-  <img src="https://media.tenor.com/SETDXWcfo-QAAAAj/deltarune-tenna.gif" alt="tenna">
+  <section class="starting-point">
+    <h1>Welcome! (Whether it's me doing more coding or someone checking out my site)</h1>
+    <h2>This is my [purple]Design for the Web 2 starter site.</p>
+  </section>
+  <section class:"images" id="memes">
+  <img src="https://media.tenor.com/SETDXWcfo-QAAAAj/deltarune-tenna.gif" alt="tenna dancing" class="tenna1"> 
+  <img src="https://i.ytimg.com/vi/q1YdkHQ3sdM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBYmtjjMOdfm3DPol7-2oVB6yVVug" alt="abk" class="abk">
+  <img src="https://media.tenor.com/SETDXWcfo-QAAAAj/deltarune-tenna.gif" alt="tenna dancing" class="tenna2">
+  </section>
+<style>
+  .starting-point{
+    width:: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  h1, h2{
+    text-align: center;
+  }
+
+  #memes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 26px 10px;
+  }
+  
+  .abk{
+    height: 200px;
+  }
+</style>
 </Layout>
