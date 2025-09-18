@@ -3,4 +3,26 @@
 
 <div class="Frame">
     <h3>My Frame</h3>
+    <div class="frame-contents">
+    <slot />
 </div>
+
+<style>
+    .Frame{
+        padding: 1rem;
+        border: 2px black solid;
+        /*max-width: 400px;*/
+    }
+
+    h3{
+        margin: 0;
+        background-color: black;
+        color: white;
+        padding: .5rem;
+        display: inline-block;
+        position: relative;
+        border-radius: .5rem;
+        left: -.5rem;
+        top: -,5rem;
+    }
+</style>
