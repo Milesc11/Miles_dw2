@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Button from "@components/Button.astro";
 import Frame from "@components/Frame.astro"
+
+import Accordian from "@components/Accordian.astro";
 ---
 
 <Layout title="Home">
@@ -10,6 +12,7 @@ import Frame from "@components/Frame.astro"
     <h2>This is my [purple]Design for the Web 2 starter site.</p>
     <Button />
     <Frame title="ABK"/>
+    <Accordian />
   </section>
    
   <section class:"images" id="memes">
@@ -17,6 +20,8 @@ import Frame from "@components/Frame.astro"
   <img src="https://i.ytimg.com/vi/q1YdkHQ3sdM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBYmtjjMOdfm3DPol7-2oVB6yVVug" alt="abk" class="abk">
   <img src="https://media.tenor.com/SETDXWcfo-QAAAAj/deltarune-tenna.gif" alt="tenna dancing" class="tenna2">
   </section>
+  
+
 <style>
   .starting-point{
     width:: 100px;
