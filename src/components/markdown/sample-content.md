@@ -11,4 +11,4 @@ This is a file i'm writing in markdown. I'm going to use the cotent from this in
 
 (empty)
 
-I lonve markdown!
+I love markdown!
