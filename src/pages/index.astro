@@ -6,6 +6,7 @@ import Frame from "@components/Frame.astro"
 import Accordian from "@components/Accordian.astro";
 import {Content as CustomMarkdown} from "../components/markdown/Pokemon-Food.md"
 import AgeChecker from "@components/AgeChecker.astro";
+import JavaComponent from "@components/JavaComponent.astro";
 ---
 
 <Layout title="Home">
@@ -27,6 +28,34 @@ import AgeChecker from "@components/AgeChecker.astro";
   <img src="https://media.tenor.com/SETDXWcfo-QAAAAj/deltarune-tenna.gif" alt="tenna dancing" class="tenna2">
   </section>
   <AgeChecker birthYear = "2004" />
+  <button id="my-button">Click me</button>
+  <div class="text-block">Website Project Ideas</div>
+
+  <style>
+    .text-block{
+      border: 1px solid white;
+      padding: 1rem;
+      transition: .5s;
+      border-radius: 10px;
+      max-width: 50%;
+    }
+    .font-large{
+      font-size: 2rem;
+      transition: .5s;
+    }
+  </style>
+  <script>
+    const myButton = document.querySelector("#my-button");
+
+    const myAction = function() {
+      const myTextBlock = document.querySelector(".text-block");
+      myTextBlock.innerText = "pokemon, memes, or waffles";
+      myTextBlock.style.backgroundColor = "white";
+      myTextBlock.classList.toggle('font-large')
+    };
+
+    myButton?.addEventListener('click', myAction);
+  </script>
 
 <style>
   .starting-point{
