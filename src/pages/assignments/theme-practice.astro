@@ -1,0 +1,83 @@
+---
+import Layout from "src/layouts/Layout.astro";
+export const pageTitle = "ColorThemes"
+import Dropdown from "@components/Dropdown.astro";
+---
+
+<Layout>
+    <h1>Color Themes</h1>
+    <button id="btnDark">Dark Mode</button>
+    <button id="btnLight">Light Mode</button>
+    <p>We're no strangers to love
+    You know the rules and so do I
+    A full commitment's what I'm thinkin' of
+    You wouldn't get this from any other guy</p>
+    <p>I just wanna tell you how I'm feeling
+    Gotta make you understand</p>
+    <p>Never gonna give you up, never gonna let you down
+    Never gonna run around and desert you
+    Never gonna make you cry, never gonna say goodbye
+    Never gonna tell a lie and hurt you
+    </p>
+    <img src="https://media.tenor.com/RK_8zCji9ZcAAAAM/never-gonna-give-you-up.gif" alt="rick astley">
+</Layout>
+
+<script>
+const btnDark = document.querySelector('#btnDark');
+
+const setDark = function(){
+    document.documentElement.style.colorScheme = "dark";
+}
+
+btnDark.addEventListener('click', setDark);
+
+const btnLight = document.querySelector('#btnLight');
+
+const setLight = function(){
+    document.documentElement.style.colorScheme = "light";
+}
+
+btnLight.addEventListener('click', setLight);
+</script>
+
+<style is:global>
+:root {
+    --theme-dark-fg: #D8CFF0;
+    --theme-dark-bg: #2D2D2D;
+    --theme-dark-accent: #00FF22;
+    --theme-dark-title: yellow;
+    --theme-dark-image: #00BFFF;
+
+    --theme-light-fg: #2A243D;
+    --theme-light-bg: #FFF5E1;
+    --theme-light-accent: #FF0000;
+    --theme-light-title: purple;
+    --theme-light-image: #522100;
+
+    color-scheme: light dark;
+    
+    --color-fg: light-dark(var(--theme-light-fg), var(--theme-dark-fg));
+    --color-bg: light-dark(var(--theme-light-bg), var(--theme-dark-bg));
+    --color-accent: light-dark(var(--theme-light-accent), var(--theme-dark-accent));
+    --color-title: light-dark(var(--theme-light-title), var(--theme-dark-title));
+    --color-image: light-dark(var(--theme-light-image), var(--theme-dark-image));
+}
+
+body{
+    background-color: var(--color-bg);
+}
+*{
+    color: var(--color-fg);
+}
+button{
+    color: var(--color-accent);
+}
+h1{
+    color: var(--color-title);
+}
+img{
+    border: 10px solid;
+    border-color: var(--color-image);
+}
+</style>
+
