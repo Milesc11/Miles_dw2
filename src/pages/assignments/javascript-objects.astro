@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export const pageTitle = "Arrays";
+
+const food = [
+  {
+    name: "pancake",
+    url: "https://www.inspiredtaste.net/wp-content/uploads/2025/07/Pancake-Recipe-1.jpg",
+  },
+  {
+    name: "waffle",
+    url: "https://www.allrecipes.com/thmb/XTGwMTd_WsxOpc2mwSkQ5qSsyJE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/22180-waffles-i-VAT-014-4x3-5f571d8bec65423f9bda82b0a6d883f6.jpg",
+  },
+  {
+    name: "cheesecake",
+    url: "https://images.food52.com/fbE7-NOJu_C_MfGFM7KmGmjhtOY=/b93a57bb-2059-4c33-8faa-a65dbb0c3abf--2021-0513_new-york-cheesecake-with-sour-cherry-topping_3x2_rocky-luten_015.jpg",
+  },
+];
+---
+
+<Layout title="Astro Starter">
+{
+  food.map(function (menu) {
+    return <a href={menu.url}>{menu.name}</a>;
+  })
+}
+</Layout>

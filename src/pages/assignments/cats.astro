@@ -1,0 +1,30 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import CatCard from "@components/CatCard.astro"
+export const pageTitle = "Cats";
+
+// load data from API:
+const data = await fetch("https://api.thecatapi.com/v1/breeds");
+const cats = await data.json();
+const selectedCats = cats.slice(1, 25);
+---
+
+<Layout title="Astro Starter">
+    <h1>Cats</h1>
+    <div class="cat-grid">
+    {
+        selectedCats.map(function (catData){
+            return <CatCard data={catData} />;
+        })
+    }
+    </div>
+<code>{JSON.stringify(cats)}</code>
+</Layout>
+<style>
+    .cat-grid{
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+        column-gap: 2rem;
+        row-gap: 1rem;
+    }
+</style>
