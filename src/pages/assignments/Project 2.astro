@@ -1,0 +1,80 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export const pageTitle = "Project 2";
+---
+
+<Layout title="Project 2">
+  <section class="roster">
+  <div class="hexagon" id="red"></div>
+  <div class="hexagon" id="blue"></div>
+  <div class="hexagon" id="yellow"></div>
+  <div class="hexagon" id="gold"></div>
+  </section>
+  <section class="roster-2">
+  <div class="hexagon" id="silver"></div>
+  <div class="hexagon" id="crystal"></div>
+  <div class="hexagon" id="ruby"></div>
+  <div class="hexagon" id="sapphire"></div>
+  </section>
+  <section class="roster-3">
+  <div class="hexagon" id="emerald"></div>
+  <div class="hexagon" id="firered"></div>
+  <div class="hexagon" id="leafgreen"></div>
+  <div class="hexagon" id="diamond"></div>
+  </section>
+  <section class="roster-4">
+  <div class="hexagon" id="pearl"></div>
+  <div class="hexagon" id="platinum"></div>
+  <div class="hexagon" id="heartgold"></div>
+  <div class="hexagon" id="soulsilver"></div>
+  </section>
+   <section class="roster-5">
+  <div class="hexagon" id="black"></div>
+  <div class="hexagon" id="white"></div>
+  <div class="hexagon" id="colosseum"></div>
+  <div class="hexagon" id="xd"></div>
+  </section>
+</Layout>
+
+<style>
+    .roster{
+  display: flex;
+  position: absolute;
+}
+.roster-2{
+  display: flex;
+  position: relative;
+  left: 55px;
+  top: 60px;
+}
+.roster-3{
+  display: flex;
+  position: absolute;
+}
+.roster-4{
+  display: flex;
+  position: relative;
+  left: 55px;
+  top: 60px;
+}
+.roster-5{
+  display: flex;
+  position: absolute;
+}
+
+.hexagon{
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  margin: 10px 5px;
+  transition: all .2s;
+}
+.hexagon:hover{
+  background-color: gray;
+}
+#black{
+  background-image: url("https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/644.png");
+  background-size: 100%;
+}
+</style>
